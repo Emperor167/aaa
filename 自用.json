@@ -1,12 +1,4 @@
-{
-    "urls": [
-        {
-            "url": "http://www.饭太硬.cc/tv",
-            "name": "01 技巧"
-        },
-        {
-            "url": "http://www.小不点.com",
-            "name": "liu673"
-        }
-    ]
-}
+{"urls":[
+{"name":"饭太硬线路","url":"http://www.饭太硬.com/tv"},
+{"name":"肥猫线路","url":"http://肥猫.com"},
+]}
