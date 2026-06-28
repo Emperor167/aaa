@@ -95,7 +95,7 @@
     },
     {
       "name": "哈喽",
-      "url": "https://xn--qvr2v.850088.xyz/player/?url={play_url}&next={urllib.parse.quote(next_url)}&title={urllib.parse.quote(title)",
+      "url": "https://xn--qvr2v.850088.xyz/player/?url=",
       "type": 0
     }
   ],
