@@ -92,6 +92,11 @@
       "name": "PM",
       "url": "https://www.playm3u8.cn/jiexi.php?url=",
       "type": 0
+    },
+    {
+      "name": "哈喽",
+      "url": "https://xn--qvr2v.850088.xyz/player/?url={play_url}&next={urllib.parse.quote(next_url)}&title={urllib.parse.quote(title)",
+      "type": 0
     }
   ],
   "flags": [
