@@ -5,7 +5,7 @@
   "sites": [
     {
       "name": "枫叶影院",
-      "type": 1,
+      "type": 2,
       "api": "./py/枫叶影院.py",
       "searchable": 1,
       "quickSearch": 1,
@@ -15,7 +15,7 @@
     },
     {
       "name": "歪比巴卜",
-      "type": 1,
+      "type": 2,
       "api": "./py/歪比巴卜.py",
       "searchable": 1,
       "quickSearch": 1,
