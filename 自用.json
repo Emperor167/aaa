@@ -7,13 +7,13 @@
       "key": "py_枫叶影院",
       "name": "枫叶影院",
       "type": 3,
-      "api": "./py/枫叶影院.py",
+      "api": "./py/枫叶影院.py"
     },
     {
       "key": "py_歪比巴卜",
       "name": "歪比巴卜",
       "type": 3,
-      "api": "./py/歪比巴卜.py",
+      "api": "./py/歪比巴卜.py"
     }
   ],
   "lives": [],
