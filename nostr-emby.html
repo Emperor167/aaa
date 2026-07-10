@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#101419">
-  <title>Nostr推荐</title>
+  <title>Nostr1</title>
   <script>
     window.WEBHOME_PAGE_OPENED_AT = Date.now();
     if (window.fongmiBridge) document.documentElement.classList.add("fm-native");
@@ -2669,7 +2669,7 @@ html,body{
   max-width: min(760px, 54vw) !important;
 }
 
-/* 网页横版：演职员表 / 相关推荐 / 同主创作品 / 季度 等卡片横排放宽到整行，
+/* 网页横版：演职员表 / 相关1 / 同主创作品 / 季度 等卡片横排放宽到整行，
    不再被 54vw 限制截断（.rail 本身可横向滚动，放宽后一排能显示更多卡片）。
    仅网页(非 TV)生效；描述正文 #detailText 仍保持限宽避让右侧海报；TV 端不受影响。 */
 html:not(.tv-mode) #detailSheet.detail-large #castBlock,
@@ -3591,7 +3591,7 @@ html.tv-mode .poster:not(.loaded) {
 
     <section class="section" id="recommendSection">
       <div class="section-head" style="display:none">
-        <h3>推荐</h3>
+        <h3>1</h3>
       </div>
       <div class="media-grid" id="recommendRail"></div>
     </section>
@@ -3665,7 +3665,7 @@ html.tv-mode .poster:not(.loaded) {
       <div class="rail" id="personWorkRail"></div>
     </div>
     <div class="detail-block" id="recommendBlock" style="display:none">
-      <h3>相关推荐</h3>
+      <h3>相关1</h3>
       <div class="rail" id="recommendWorkRail"></div>
     </div>
 
@@ -5945,7 +5945,7 @@ html.tv-mode .poster:not(.loaded) {
         state.pan.renderKeys = "";
         renderPanResults();
       } catch (e) {
-        state.site = { name: "推荐首页" };
+        state.site = { name: "1首页" };
         state.pan.checkEnabled = false;
         setStatus("sdk", "SDK 获取失败：" + (e.message || "unknown"));
       }
@@ -5968,7 +5968,7 @@ html.tv-mode .poster:not(.loaded) {
       state.catalogPage[id] = { page: 0, total: 1, loading: true, loaded: false };
       setStatus("tmdb", `请求 ${list.title}`);
       if (state.activeList === id) renderActiveGrid();
-      // 多数据源混合加载（推荐 tab 用）
+      // 多数据源混合加载（1 tab 用）
       if (list.sources && list.sources.length) {
         try {
           const fetches = list.sources.map((src) => {
@@ -6363,7 +6363,7 @@ html.tv-mode .poster:not(.loaded) {
     }
 
     function renderChips() {
-      const chips = [{ id: "recent", title: "最近" }, { id: "all", title: "推荐" }]
+      const chips = [{ id: "recent", title: "最近" }, { id: "all", title: "1" }]
         .concat(visibleTmdbLists().filter((item) => item.id !== "all").map((item) => ({ id: item.id, title: item.title })));
       const root = $("chips");
       const keys = chips.map((chip) => chip.id + ":" + chip.title).join("\n");
@@ -6421,10 +6421,10 @@ html.tv-mode .poster:not(.loaded) {
     }
 
     function renderRecommendations() {
-      // 推荐 tab 直接走和其他分类一样的 loadCatalogList 逻辑
+      // 1 tab 直接走和其他分类一样的 loadCatalogList 逻辑
       const list = getList("all");
       if (!list) return;
-      const panel = ensureListPanel("all", "推荐", "全平台热门");
+      const panel = ensureListPanel("all", "1", "全平台热门");
       const grid = panel.querySelector(".media-grid");
       activateListPanel("all");
       const page = state.catalogPage["all"];
@@ -8476,7 +8476,7 @@ nsec: ${state.identity.nsec}` : "身份未就绪";
           .map((value, index) => {
             const mediaType = value.media_type || item.mediaType;
             if ((mediaType !== "movie" && mediaType !== "tv") || !value.poster_path) return null;
-            return normalizeTmdb(value, { id: "recommend", title: "相关推荐", mediaType }, index);
+            return normalizeTmdb(value, { id: "recommend", title: "相关1", mediaType }, index);
           })
           .filter(Boolean)
           .slice(0, 18);
@@ -12434,7 +12434,7 @@ nsec: ${state.identity.nsec}` : "身份未就绪";
         return;
       }
       // 搜索板块（聚焦态 / 联想框 / 结果列表 共用同一 #search 历史层）：
-      // 一次返回整体关闭，回到主页推荐，并保持全屏、留在 App（对齐 Eclipse）。
+      // 一次返回整体关闭，回到主页1，并保持全屏、留在 App（对齐 Eclipse）。
       if (location.hash !== "#search" && _isSearchUiOpen()) {
         _searchHistoryPushed = false;
         _closeAllSearchUi();
