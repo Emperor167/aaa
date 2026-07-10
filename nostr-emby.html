@@ -3913,7 +3913,7 @@ html.tv-mode .poster:not(.loaded) {
         ]
       },
       pan: {
-        apiBase: "https://so.252035.xyz",
+        apiBase: "",
         cacheKey: "fish2018_home_v1_pan_config",
         diskTypes: ["quark", "aliyun", "baidu", "uc", "tianyi", "xunlei", "123", "115", "mobile", "pikpak", "guangya", "magnet", "ed2k"],
         checkableDiskTypes: ["quark", "aliyun", "baidu", "uc", "tianyi", "xunlei", "123", "115", "mobile"],
@@ -4225,7 +4225,7 @@ html.tv-mode .poster:not(.loaded) {
 
     function defaultPanConfig() {
       return {
-        apiBase: window.WEBHOME_CONFIG.pan.apiBase || "https://so.252035.xyz",
+        apiBase: window.WEBHOME_CONFIG.pan.apiBase || "",
         diskTypes: (window.WEBHOME_CONFIG.pan.diskTypes || []).slice(),
         username: "",
         password: "",
